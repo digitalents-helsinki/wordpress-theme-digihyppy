@@ -3,3 +3,4 @@ wp-content
 node_modules
 dist
 sqldumps
+.env
