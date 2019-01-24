@@ -1,0 +1,16 @@
+{
+  "name": "joonasyliaho/wordpress-theme-digihyppy",
+  "type": "project",
+  "require": {
+      "timber/timber": "^1.8",
+      "twig/twig": "^2.6",
+      "roots/soil": "^3.7"
+  },
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Joonas Yliaho",
+          "email": "joonas.yliaho@gmail.com"
+      }
+  ]
+}
