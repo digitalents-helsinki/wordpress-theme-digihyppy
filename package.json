@@ -7,8 +7,7 @@
     "dev": "run-p dev:*",
     "dev:theme": "NODE_ENV=development node ./webpack/dev.js",
     "dev:blocks": "cd blocks && npm run start",
-    "build": "NODE_ENV=production node ./webpack/build.js",
-    "postinstall": "npm run dev"
+    "build": "NODE_ENV=production node ./webpack/build.js"
   },
   "devDependencies": {
     "@types/webpack": "^4.4.24",

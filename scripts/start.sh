@@ -11,16 +11,13 @@ blue_text_func() {
 
 . ./scripts/check_deps.sh
 
-blue_text_func 'Installing node_modules...'
-yarn
-
-
 blue_text_func 'Installing php dependencies...'
 composer install
 
 
 blue_text_func 'Setting up docker containers...'
 docker-compose up -d --build
+docker-compose exec wordpress sh -c "chown -R www-data:www-data /var/www/html/*"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   blue_text_func 'Linux detected, trying to fix permission issues'
