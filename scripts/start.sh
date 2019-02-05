@@ -22,6 +22,12 @@ composer install
 blue_text_func 'Setting up docker containers...'
 docker-compose up -d --build
 
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  blue_text_func 'Linux detected, trying to fix permission issues'
+  getent group www-data || groupadd www-data
+  sudo chown -R $USER:www-data ../
+fi
+
 
 blue_text_func 'All Done!'
 read -p "Do you want to start webpack dev server? [y/N]" -n 1 -r
