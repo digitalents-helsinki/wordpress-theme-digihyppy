@@ -16,7 +16,7 @@ services:
   wordpress:
     links:
       - db
-    image: wordpress:5.0.2-apache
+    image: wordpress:5.0.3-php7.3-apache
     ports:
       - '8080:80'
     restart: always
